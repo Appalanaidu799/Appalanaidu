@@ -1,0 +1,72 @@
+                                                                     JENKINS
+
+Deploy and Delivery of an application by using maven goals (compile, Test, Qa, package) Actually we have 6 maven goals to delivery the project and generate 
+Artifacts in that project 
+
+open Jenkins server and give username and password of Jenkins get into the server first select new item name is "Jenkins compile"=free style project select =Descri0ption you can write and select Git and paste the url of git and in the source code management you can select git paste the git hub repository then select branch of git hub repository In Build steps select invoke-top-level Maven target and select first goal is     "compoile "  then Apply and save Build the " Jenkins compile"
+
+same new item name is "JENKINS TEST"
+IN JENKINS TEST INVOKE-TOP-LEVEL MAVEN TARGETS SELECTED AND WRITE
+ "Test"
+
+
+NEXT "JENKINS QA " INVOKE-TOP-LEVEL MAVEN TARGETS SELECTED AND WRITE "pmd:pmd"   BEFORE THAT WE HAVE TO INSTALL A "PMD" WARNING PLUGIN 
+
+NEXT "JENKINS ;PACKAGE"  INVOKE-TOP-LEVEL MAVEN TARGETS SELECTED AND WRITE
+"package"
+
+
+
+                                                AUTOMATION BY USING  BUILD TRIGGER
+
+SELECT JENKINS TEST project IN THE JENKINS SERVER AND SELECT BUILD TRIGGER AND TICK THE BUILD AFTER OTHER PROJECTS ARE BUILD AND ENTER Jenkins comile
+
+SELECT JENKINS QA project IN THE JENKINS SERVER AND SELECT BUILD TRIGGER AND TICK THE BUILD AFTER OTHER PROJECTS ARE BUILD AND ENTER "JENKINS TEST"
+
+SELECT JENKINS "PACKAGE" project IN THE JENKINS SERVER AND SELECT BUILD TRIGGER AND TICK THE BUILD AFTER OTHER PROJECTS ARE BUILD AND ENTER "JENKINS QA"
+
+
+
+
+THEN GO BACK TO JENKINS SERVER AND SELECT A PROJECT JENKINS COMPILE THEN IT STARTED TO BUILD TOTAL FOUR MAVEN GOALS *("COMPILE, TEST, QA, PACKAGE)
+
+                                          
+
+
+                                                  DELIVERY ;PROJECT AUTOMATICALLY 
+
+FIRST YOU CAN OPENN JENKINS SERVER AND SELECT  plugins and install the Delivery to container plugin 
+Then go back to the Jenkins manage server
+In the top of the Jenkins server you can select Beside of the New item pplus and select Delivery to container and give a upstream is Jenkins Compile and downstream is Jenkins p;ackage 
+
+and select and enter then build the pip;eline 
+
+
+
+
+Now go back to Jenkins server and select plugins and enter the Build the pip;eline plugin and install the p;lugins 
+Now go back to Jenkins server and select Beside of the New item and write in plus box Build and select Build to container
+and then enter the ustream value is jenkkins compile 
+Then Build the job and contains the Display the side of the build and deliver of the project 
+
+
+
+                                                   WEBHOOK
+
+Webhook is used to get the trigeering when new feature is added to the exitisting project which is already build and delivery into the pipeline job
+In the time of adding the new feature to the existing project which is already deliverd and build the job what are the maven goals are existed and that job is automatically build and delivery that job automatically build when new features are added to the job
+
+In Jenkins server you can used deliverty pipeline and build the job and compile the code and delivery the cpde and maven goals are executed and build the maven project you can see the thqat job is build automatically when new features are added to that project you need not to do build again in the time of adding new feature to the project its automaticalluy trigger and build automatically 
+
+
+
+
+
+
+
+
+                                                                
+
+
+    
+       
